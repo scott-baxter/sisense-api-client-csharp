@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1452C29-AE5B-40C0-A61E-060A295947D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SisenseApiClient</RootNamespace>
+    <AssemblyName>SisenseApiClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JWT, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.4.0.0\lib\net46\JWT.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authenticators\GlobalTokenAuthenticator.cs" />
+    <Compile Include="Authenticators\IAuthenticator.cs" />
+    <Compile Include="Authenticators\LoginAuthenticator.cs" />
+    <Compile Include="Exceptions\SisenseClientHttpException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Authentication\AuthenticationService.cs" />
+    <Compile Include="Services\Authentication\Models\LoginCredentials.cs" />
+    <Compile Include="Services\Authentication\Models\LoginResponse.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubesService.cs" />
+    <Compile Include="Services\ElastiCubes\Models\BasicElastiCubeSet.cs" />
+    <Compile Include="Services\ElastiCubes\Models\CustomTable.cs" />
+    <Compile Include="Services\ElastiCubes\Models\ElastiCubeSet.cs" />
+    <Compile Include="Services\ElastiCubes\Models\RServerConnectivity.cs" />
+    <Compile Include="Services\ElastiCubes\Models\ServerSettings.cs" />
+    <Compile Include="Services\ElastiCubes\Models\ServerStatus.cs" />
+    <Compile Include="Services\ElastiCubes\Models\TableRelation.cs" />
+    <Compile Include="Services\ElastiCubes\Types\BuildType.cs" />
+    <Compile Include="Services\ElastiCubes\Types\ElastiCubeStatus.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="SisenseClient.cs" />
+    <Compile Include="Authenticators\Types\TokenType.cs" />
+    <Compile Include="Utils\HttpClient\HttpClient.cs" />
+    <Compile Include="Utils\HttpClient\IHttpClient.cs" />
+    <Compile Include="Utils\HttpMethodUtils.cs" />
+    <Compile Include="Utils\JsonUtils.cs" />
+    <Compile Include="Utils\QueryStringBuilder.cs" />
+    <Compile Include="Utils\SystemClock\ISystemClock.cs" />
+    <Compile Include="Utils\SystemClock\SystemClock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
