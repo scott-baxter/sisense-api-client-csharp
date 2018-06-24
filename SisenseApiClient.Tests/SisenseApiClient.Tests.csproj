@@ -71,9 +71,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authenticators\FakeLoginAuthenticator.cs" />
     <Compile Include="Authenticators\GlobalTokenAthenticatorTests.cs" />
     <Compile Include="Authenticators\LoginAuthenticatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubesByServerAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersElastiCubesAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubeMetadataAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubeMetadataFieldsAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServerStatusAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersMetadataAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubesMetadataAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetBuildRevisionAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetCustomTableAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetCustomTableRelationsAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetCustomTablesAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetServerSettingsAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetSetAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetSetsAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\VerifyConnectivityWithRServerAsyncTests.cs" />
+    <Compile Include="Utils\HttpClient\FakeHttpClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

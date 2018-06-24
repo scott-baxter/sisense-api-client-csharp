@@ -12,7 +12,7 @@
         IsDown32Bit = 64,
         IsDown64Bit = 128,
         Locked = 256,
-        CubeOrChildBuilding = 512,
+        CubeOrChildBuilding = 514, // Not power of 2
         Starting = 1024,
         Building = 2048,
         TryingImportBigData = 4096,

@@ -9,23 +9,34 @@ namespace SisenseApiClient.Utils
 
         public QueryStringBuilder AddParameter(string name, string value)
         {
-            _queryParameters.Add(new KeyValuePair<string, string>(name, value));
+            if (!string.IsNullOrEmpty(value))
+            {
+                _queryParameters.Add(new KeyValuePair<string, string>(name, value));
+            }
+
             return this;
         }
 
         public string Build()
         {
-            var queryString = new StringBuilder("?");
+            var stringBuilder = new StringBuilder("?");
 
             foreach (var queryParameter in _queryParameters)
             {
                 if (!string.IsNullOrEmpty(queryParameter.Value))
                 {
-                    queryString.Append(queryParameter.Key.ToLower() + "=" + queryParameter.Value + "&");
+                    stringBuilder.Append(queryParameter.Key.ToLower() + "=" + queryParameter.Value + "&");
                 }
             }
 
-            return queryString.ToString().TrimEnd('&');
+            string queryString = stringBuilder.ToString().TrimEnd('&');
+
+            if (queryString == "?")
+            {
+                return string.Empty;
+            }
+
+            return queryString;
         }
     }
 }

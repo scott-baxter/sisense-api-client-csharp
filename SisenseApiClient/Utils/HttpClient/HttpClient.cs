@@ -6,8 +6,11 @@ namespace SisenseApiClient.Utils.HttpClient
 {
     public class HttpClient : IHttpClient
     {
-        // It's important to not use cookies because that avoid problems when calling the login endpoint twice
-        private static readonly System.Net.Http.HttpClient _client = new System.Net.Http.HttpClient(new HttpClientHandler() { UseCookies = false } );
+        // It's important to not allow cookies because that avoid problems when calling the login endpoint a second time
+        private static readonly System.Net.Http.HttpClient _client = new System.Net.Http.HttpClient(new HttpClientHandler()
+        {
+            UseCookies = false
+        });
 
         public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
