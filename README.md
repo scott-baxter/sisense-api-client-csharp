@@ -66,6 +66,8 @@ var sets = await sisenseCilent.ElatiCubes.GetSetsAsync();
   - StartElastiCubeServerAsync(server, cubeName) - Starts the ElastiCube Server.
   - StopElastiCubeServerAsync(server, cubeName) - Stops the ElastiCube Server.
   - RestartElastiCubeServerAsync(server, cubeName) - Restarts the ElastiCube Server.
+  - StartBuildElastiCubeServerAsync(server, cubeName, buildType) - Starts the build process for an ElastiCube.
+  - StopBuildElastiCubeServerAsync(server, cubeName) - Stops the build process for an ElastiCube.
 
 <h1>Bugs or questions?</h1>
 

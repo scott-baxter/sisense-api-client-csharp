@@ -327,6 +327,33 @@ namespace SisenseApiClient.Services.ElastiCubes
                 .ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Starts the build process for an ElastiCube.
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        /// <param name="buildType">Type of the build.</param>
+        public async Task StartBuildElastiCubeServerAsync(string server, string cubeName, BuildType? buildType)
+        {
+            string queryString = new QueryStringBuilder()
+                .AddParameter("type", buildType?.ToString())
+                .Build();
+
+            await SendRequestAsync(HttpMethod.Post, $"elasticubes/{server}/{cubeName}/startBuild{queryString}")
+                .ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Stops the build process for an ElastiCube.
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        public async Task StopBuildElastiCubeServerAsync(string server, string cubeName)
+        {
+            await SendRequestAsync(HttpMethod.Post, $"elasticubes/{server}/{cubeName}/stopBuild")
+                .ConfigureAwait(false);
+        }
+
         #endregion
     }
 }
