@@ -17,7 +17,7 @@ namespace SisenseApiClient.Tests.Authenticators
             // Arrange
             var systemClockMock = new Mock<ISystemClock>();
             systemClockMock
-                .Setup(x => x.UtcNow())
+                .Setup(x => x.UtcNow)
                 .Returns(new DateTimeOffset(2018, 1, 1, 0, 0, 0, TimeSpan.Zero));
 
             var globalTokenAuthenticator = new GlobalTokenAuthenticator(email, password, apiKey, systemClockMock.Object);

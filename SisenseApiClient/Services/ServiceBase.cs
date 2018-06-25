@@ -38,7 +38,7 @@ namespace SisenseApiClient.Services
             string contentBody = await SendRequestAsync(method, relativeUri, cancellationToken, content, useAuthentication)
                 .ConfigureAwait(false);
 
-            return JsonConvert.DeserializeObject<T>(contentBody);
+            return JsonConvert.DeserializeObject<T>(contentBody, JsonUtils.DeserializerSettings);
         }
 
         protected async Task<string> SendRequestAsync(HttpMethod method, string relativeUri, object content = null)

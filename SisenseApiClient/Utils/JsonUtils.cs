@@ -8,10 +8,16 @@ namespace SisenseApiClient.Utils
         public static JsonSerializerSettings SerializerSettings => new JsonSerializerSettings
         {
             NullValueHandling = NullValueHandling.Ignore,
+            DateFormatHandling = DateFormatHandling.MicrosoftDateFormat,
             ContractResolver = new DefaultContractResolver
             {
                 NamingStrategy = new CamelCaseNamingStrategy()
             }            
+        };
+
+        public static JsonSerializerSettings DeserializerSettings => new JsonSerializerSettings
+        {
+            DateFormatHandling = DateFormatHandling.MicrosoftDateFormat
         };
     }
 }

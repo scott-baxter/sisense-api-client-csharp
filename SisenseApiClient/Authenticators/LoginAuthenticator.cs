@@ -48,7 +48,7 @@ namespace SisenseApiClient.Authenticators
 
             try
             {
-                if (_tokenExpiration > _systemClock.UtcNow())
+                if (_tokenExpiration > _systemClock.UtcNow)
                 {
                     return _bearerToken;
                 }
@@ -67,7 +67,7 @@ namespace SisenseApiClient.Authenticators
 
                 // The token returned by sisense does not indicate any expiration time,
                 // so here we set some seconds to renew it at some time
-                _tokenExpiration = _systemClock.UtcNow().AddSeconds(_tokenExpirationSeconds);
+                _tokenExpiration = _systemClock.UtcNow.AddSeconds(_tokenExpirationSeconds);
 
                 return _bearerToken;
             }

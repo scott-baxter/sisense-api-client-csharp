@@ -33,7 +33,7 @@ namespace SisenseApiClient.Tests.Authenticators
 
             var systemClockMock = new Mock<ISystemClock>();
             systemClockMock
-                .Setup(x => x.UtcNow())
+                .Setup(x => x.UtcNow)
                 .Returns(new DateTimeOffset(2018, 1, 1, 0, 0, 0, TimeSpan.Zero));
 
             var authenticator = new LoginAuthenticator("username", "mypass", httpClientMock.Object, 

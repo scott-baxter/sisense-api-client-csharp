@@ -4,6 +4,6 @@ namespace SisenseApiClient.Utils.SystemClock
 {
     public interface ISystemClock
     {
-        DateTimeOffset UtcNow();
+        DateTimeOffset UtcNow { get; }
     }
 }

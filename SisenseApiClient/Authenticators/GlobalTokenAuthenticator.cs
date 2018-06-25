@@ -47,7 +47,7 @@ namespace SisenseApiClient.Authenticators
             var token = new JwtBuilder()
               .WithAlgorithm(new HMACSHA256Algorithm())
               .WithSecret(_apiKey)
-              .AddClaim("iat", _systemClock.UtcNow().ToUnixTimeSeconds())
+              .AddClaim("iat", _systemClock.UtcNow.ToUnixTimeSeconds())
               .AddClaim("email", _email)
               .AddClaim("password", _password)
               .Build();
