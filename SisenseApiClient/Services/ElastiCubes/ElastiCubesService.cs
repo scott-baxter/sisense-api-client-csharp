@@ -294,6 +294,39 @@ namespace SisenseApiClient.Services.ElastiCubes
                 .ConfigureAwait(false);
         }
 
+        /// <summary>
+        /// Starts the ElastiCube Server.
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        public async Task StartElastiCubeServerAsync(string server, string cubeName)
+        {
+            await SendRequestAsync(HttpMethod.Post, $"elasticubes/{server}/{cubeName}/start")
+                .ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Stops the ElastiCube Server.
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        public async Task StopElastiCubeServerAsync(string server, string cubeName)
+        {
+            await SendRequestAsync(HttpMethod.Post, $"elasticubes/{server}/{cubeName}/stop")
+                .ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Restarts the ElastiCube Server.
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        public async Task RestartElastiCubeServerAsync(string server, string cubeName)
+        {
+            await SendRequestAsync(HttpMethod.Post, $"elasticubes/{server}/{cubeName}/restart")
+                .ConfigureAwait(false);
+        }
+
         #endregion
     }
 }
