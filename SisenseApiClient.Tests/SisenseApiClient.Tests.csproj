@@ -79,6 +79,7 @@
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersElastiCubesAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubeMetadataAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubeMetadataFieldsAsyncTests.cs" />
+    <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubePermissionsAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServerStatusAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersMetadataAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubesMetadataAsyncTests.cs" />

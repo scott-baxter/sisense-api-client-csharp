@@ -54,6 +54,7 @@
     <Compile Include="Services\ElastiCubes\Models\BasicElastiCubeSet.cs" />
     <Compile Include="Services\ElastiCubes\Models\CustomTable.cs" />
     <Compile Include="Services\ElastiCubes\Models\ElastiCube.cs" />
+    <Compile Include="Services\ElastiCubes\Models\ElastiCubePermissions.cs" />
     <Compile Include="Services\ElastiCubes\Models\ServerElastiCube.cs" />
     <Compile Include="Services\ElastiCubes\Models\ServerElastiCubeMetadata.cs" />
     <Compile Include="Services\ElastiCubes\Models\ElastiCubeSet.cs" />

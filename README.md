@@ -62,6 +62,7 @@ var sets = await sisenseCilent.ElatiCubes.GetSetsAsync();
   - GetServersMetadataAsync(query, offset, count, direction, withPermissions) - Returns the ElastiCube servers with metadata.
   - GetElastiCubesByServerAsync(server, query, offset, count, orderBy, direction) - Returns all the ElastiCubes by server.
   - GetServerStatusAsync(server, query, offset, count, orderBy, direction) - Returns the status of each ElastiCube in the selected server.
+  - GetElastiCubePermissionsAsync(server, cubeName) - Returns all authentication records for the given ElastiCube.
 
 <h1>Bugs or questions?</h1>
 

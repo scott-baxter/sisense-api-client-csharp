@@ -17,10 +17,10 @@ namespace SisenseApiClient.Services.ElastiCubes
         {
         }
 
-        #region v1
+        #region v1.0
 
         /// <summary>
-        /// Get a list of ElastiCube Sets.
+        /// Get a list of ElastiCube Sets. (v1.0)
         /// </summary>
         public async Task<IEnumerable<ElastiCubeSet>> GetSetsAsync()
         {
@@ -29,7 +29,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Get an ElastiCube Set.
+        /// Get an ElastiCube Set. (v1.0)
         /// </summary>
         /// <param name="setName">ElastiCube set name.</param>
         public async Task<ElastiCubeSet> GetSetAsync(string setName)
@@ -39,7 +39,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Get the ElastiCube build revision
+        /// Get the ElastiCube build revision. (v1.0)
         /// </summary>
         /// <param name="server">The server of the ElastiCube.</param>
         /// <param name="cubeName">The name of the ElastiCube.</param>
@@ -50,7 +50,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Get an ElastiCube's custom tables.
+        /// Get an ElastiCube's custom tables. (v1.0)
         /// </summary>
         /// <param name="server">The server of the ElastiCube.</param>
         /// <param name="cubeName">The name of the ElastiCube.</param>
@@ -64,7 +64,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Get an ElastiCube table's relation.
+        /// Get an ElastiCube table's relation. (v1.0)
         /// </summary>
         /// <param name="server">The server of the ElastiCube.</param>
         /// <param name="cubeName">The name of the ElastiCube.</param>
@@ -86,7 +86,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         //}
 
         /// <summary>
-        /// Get an ElastiCube's custom table.
+        /// Get an ElastiCube's custom table. (v1.0)
         /// </summary>
         /// <param name="server">The server of the ElastiCube.</param>
         /// <param name="cubeName">The name of the ElastiCube.</param>
@@ -117,7 +117,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         //}
 
         /// <summary>
-        /// Verify connectivity between your ElastiCube server and an R server.
+        /// Verify connectivity between your ElastiCube server and an R server. (v1.0)
         /// </summary>
         /// <param name="server">The ElastiCube server’s address.</param>
         /// <param name="rserver">The R server address.</param>
@@ -128,7 +128,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns your ElastiCube server’s settings.
+        /// Returns your ElastiCube server’s settings. (v1.0)
         /// </summary>
         /// <param name="server">The ElastiCube server’s address.</param>
         public async Task<ServerSettings> GetServerSettingsAsync(string server)
@@ -142,7 +142,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         #region v0.9
 
         /// <summary>
-        /// Returns a list of ElastiCubes with metadata.
+        /// Returns a list of ElastiCubes with metadata. (v0.9)
         /// </summary>
         /// <param name="query">A query that returns all ElastiCubes beginning with the value. For example, a value of 'sa' will return ElastiCubes called 'Sample Ecommerce', 'Sample Lead generation' etc.</param>
         /// <param name="sortBy">The order in which the ElastiCubes appear in the response.</param>
@@ -158,7 +158,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns metadata for an ElastiCube by ElastiCube name.
+        /// Returns metadata for an ElastiCube by ElastiCube name. (v0.9)
         /// </summary>
         /// <param name="cubeName">The name of the ElastiCube.</param>
         public async Task<ServerElastiCubeMetadata> GetElastiCubeMetadataAsync(string cubeName)
@@ -168,7 +168,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns fields included in a specific ElastiCube.
+        /// Returns fields included in a specific ElastiCube. (v0.9)
         /// </summary>
         /// <param name="cubeName">The name of the ElastiCube.</param>
         /// <param name="query">Enter a specific query to return only fields that include the query string.</param>
@@ -188,7 +188,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns ElastiCubes with their server and ElastiCube details.
+        /// Returns ElastiCubes with their server and ElastiCube details. (v0.9)
         /// </summary>
         /// <param name="query">A query that returns all ElastiCubes beginning with the value. For example, a value of 'sa' will return ElastiCubes called 'Sample Ecommerce', 'Sample Lead generation', etc.</param>
         /// <param name="offset">>Defines how many items to skip before returning the results. For example, to return results from value #101 onward, enter a value of '100'.</param>
@@ -213,7 +213,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns the ElastiCube servers with metadata.
+        /// Returns the ElastiCube servers with metadata. (v0.9)
         /// </summary>
         /// <param name="query">A query that returns all ElastiCubes beginning with the value. For example, a value of 'sa' will return ElastiCubes called 'Sample Ecommerce', 'Sample Lead generation', etc.</param>
         /// <param name="offset">>Defines how many items to skip before returning the results. For example, to return results from value #101 onward, enter a value of '100'.</param>
@@ -237,7 +237,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         }
 
         /// <summary>
-        /// Returns all the ElastiCubes by server.
+        /// Returns all the ElastiCubes by server. (v0.9)
         /// </summary>
         /// <param name="server">The server address. The default value that you can enter is localhost.</param>
         /// <param name="query">A query that returns all ElastiCubes beginning with the value. For example, a value of 'sa' will return ElastiCubes called 'Sample Ecommerce', 'Sample Lead generation', etc.</param>
@@ -268,7 +268,7 @@ namespace SisenseApiClient.Services.ElastiCubes
         //}
 
         /// <summary>
-        /// Returns the status of each ElastiCube in the selected server.
+        /// Returns the status of each ElastiCube in the selected server. (v0.9)
         /// </summary>
         /// <param name="server">The server address. The default value that you can enter is localhost.</param>
         /// <param name="query">A query that returns all ElastiCubes beginning with the value. For example, a value of 'sa' will return ElastiCubes called 'Sample Ecommerce', 'Sample Lead generation', etc.</param>
@@ -280,6 +280,17 @@ namespace SisenseApiClient.Services.ElastiCubes
             string orderBy = "", string direction = "")
         {
             return await SendRequestAsync<IEnumerable<ServerStatus>>(HttpMethod.Get, $"elasticubes/servers/{server}/status")
+                .ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Returns all authentication records for the given ElastiCube. (v0.9)
+        /// </summary>
+        /// <param name="server">The ElastiCube's server address.</param>
+        /// <param name="cubeName">The name or ID of the ElastiCube.</param>
+        public async Task<ElastiCubePermissions> GetElastiCubePermissionsAsync(string server, string cubeName)
+        {
+            return await SendRequestAsync<ElastiCubePermissions>(HttpMethod.Get, $"elasticubes/{server}/{cubeName}/permissions")
                 .ConfigureAwait(false);
         }
 
