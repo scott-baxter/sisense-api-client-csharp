@@ -1,6 +1,12 @@
 # sisense-api-client-csharp
 The unofficial .NET/C# client library for the Sisense API.
 
+I develop this library in my spare time, so if you need an operation that is not implemented yet, please let me know and I will add it asap.
+
+I'm testing this library with a Sisense Server 7.1.
+
+In the future I will create a nuget package to easily include in the projects.
+
 <h1>How to Use</h1>
 
 ````
@@ -68,6 +74,12 @@ var sets = await sisenseCilent.ElatiCubes.GetSetsAsync();
   - RestartElastiCubeServerAsync(server, cubeName) - Restarts the ElastiCube Server.
   - StartBuildElastiCubeServerAsync(server, cubeName, buildType) - Starts the build process for an ElastiCube.
   - StopBuildElastiCubeServerAsync(server, cubeName) - Stops the build process for an ElastiCube.
+
+###### JAQL ######
+- RunAsync(jaqlQuery, cancellationToken) - Runs a JAQL Query and returns the result as a string.
+- RunAsync(jaqlQuery) - Runs a JAQL Query and returns the result as a string.
+- RunAsync<T>(jaqlQuery, cancellationToken) - Runs a JAQL Query and returns the result as an object of the specified type.
+- RunAsync<T>(jaqlQuery) - Runs a JAQL Query and returns the result as an object of the specified type.
 
 <h1>Bugs or questions?</h1>
 

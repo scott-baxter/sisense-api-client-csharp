@@ -18,6 +18,8 @@ namespace SisenseApiClient.Services
         private readonly IHttpClient _httpClient;
         private readonly IAuthenticator _authenticator;
 
+        protected string BasePath { get; set; } = "api/";
+
         public ServiceBase(string serverUrl, IHttpClient httpClient, IAuthenticator authenticator)
         {
             _serverUrl = serverUrl;
@@ -82,7 +84,7 @@ namespace SisenseApiClient.Services
 
         private async Task<HttpRequestMessage> CreateRequestMessageAsync(HttpMethod method, string relativeUri, object content = null, bool useAuthentication = true)
         {
-            var request = new HttpRequestMessage(method, $"{_serverUrl}/api/{relativeUri}");
+            var request = new HttpRequestMessage(method, $"{_serverUrl}/{BasePath}{relativeUri}");
             request.Headers.Add("Accept", "application/json");
 
             if (useAuthentication)
@@ -93,8 +95,9 @@ namespace SisenseApiClient.Services
 
             if (content != null)
             {
-                string serializedContent = JsonConvert.SerializeObject(content, Formatting.None, JsonUtils.SerializerSettings);
-                request.Content = new StringContent(serializedContent);
+                string stringConent = content as string ?? 
+                    JsonConvert.SerializeObject(content, Formatting.None, JsonUtils.SerializerSettings);
+                request.Content = new StringContent(stringConent);
                 request.Content.Headers.ContentType = new MediaTypeWithQualityHeaderValue("application/json");
             }
 
