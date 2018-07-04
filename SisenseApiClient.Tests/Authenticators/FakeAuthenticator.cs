@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace SisenseApiClient.Tests.Authenticators
 {
-    class FakeLoginAuthenticator : IAuthenticator
+    class FakeAuthenticator : IAuthenticator
     {
         public string ServerUrl { get; set; }
 

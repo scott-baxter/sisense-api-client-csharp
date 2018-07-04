@@ -22,7 +22,7 @@ namespace SisenseApiClient.Tests.Services.Jaql
             {
                 // Arrange
                 IHttpClient httpClient = new FakeHttpClient(responseMessageToReturn: CreateResponse());
-                IAuthenticator authenticator = new FakeLoginAuthenticator();
+                IAuthenticator authenticator = new FakeAuthenticator();
                 var service = new JaqlRunnerService("", httpClient, authenticator);
 
                 // Act
@@ -73,7 +73,7 @@ namespace SisenseApiClient.Tests.Services.Jaql
             {
                 // Arrange
                 IHttpClient httpClient = new FakeHttpClient(responseMessageToReturn: CreateResponse());
-                IAuthenticator authenticator = new FakeLoginAuthenticator();
+                IAuthenticator authenticator = new FakeAuthenticator();
                 var service = new JaqlRunnerService("", httpClient, authenticator);
 
                 // Act

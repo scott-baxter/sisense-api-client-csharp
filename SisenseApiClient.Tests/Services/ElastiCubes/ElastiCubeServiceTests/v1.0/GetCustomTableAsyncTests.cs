@@ -17,7 +17,7 @@ namespace SisenseApiClient.Tests.Services.ElastiCubes.ElastiCubeServiceTests.v1_
         {
             // Arrange
             IHttpClient httpClient = new FakeHttpClient(responseMessageToReturn: CreateResponse());
-            IAuthenticator authenticator = new FakeLoginAuthenticator();
+            IAuthenticator authenticator = new FakeAuthenticator();
             var service = new ElastiCubesService("", httpClient, authenticator);
 
             // Act

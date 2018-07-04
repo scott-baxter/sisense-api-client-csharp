@@ -14,7 +14,7 @@ using SisenseApiClient;
 using SisenseApiClient.Authenticators;
 
 // Create an authenticator with your username and password
-var authenticator = new LoginAuthenticator("<username>", "<password>");
+var authenticator = new Authenticator("<username>", "<password>");
 
 // Create the Sisense client
 var sisenseClient = new SisenseClient("<sisense_server>", authenticator);

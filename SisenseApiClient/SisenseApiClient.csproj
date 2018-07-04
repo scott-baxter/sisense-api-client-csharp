@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Authenticators\GlobalTokenAuthenticator.cs" />
     <Compile Include="Authenticators\IAuthenticator.cs" />
-    <Compile Include="Authenticators\LoginAuthenticator.cs" />
+    <Compile Include="Authenticators\Authenticator.cs" />
     <Compile Include="Exceptions\SisenseClientHttpException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Authentication\AuthenticationService.cs" />

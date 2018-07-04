@@ -9,7 +9,7 @@ using SisenseApiClient.Utils.SystemClock;
 
 namespace SisenseApiClient.Authenticators
 {
-    public class LoginAuthenticator : IAuthenticator
+    public class Authenticator : IAuthenticator
     {
         private const int SECONDS_IN_HOUR = 3600;
 
@@ -26,7 +26,7 @@ namespace SisenseApiClient.Authenticators
 
         public TokenType TokenType => TokenType.Bearer;
 
-        public LoginAuthenticator(string username, string password, IHttpClient httpClient, ISystemClock systemClock,
+        public Authenticator(string username, string password, IHttpClient httpClient, ISystemClock systemClock,
             int tokenExpirationSeconds = SECONDS_IN_HOUR)
         {
             _username = username;
@@ -36,7 +36,7 @@ namespace SisenseApiClient.Authenticators
             _tokenExpirationSeconds = tokenExpirationSeconds;
         }
 
-        public LoginAuthenticator(string username, string password, int tokenExpirationSeconds = SECONDS_IN_HOUR)
+        public Authenticator(string username, string password, int tokenExpirationSeconds = SECONDS_IN_HOUR)
             : this(username, password, new HttpClient(), new SystemClock(), tokenExpirationSeconds)
         {
         }

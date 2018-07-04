@@ -74,9 +74,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authenticators\FakeLoginAuthenticator.cs" />
+    <Compile Include="Authenticators\FakeAuthenticator.cs" />
     <Compile Include="Authenticators\GlobalTokenAthenticatorTests.cs" />
-    <Compile Include="Authenticators\LoginAuthenticatorTests.cs" />
+    <Compile Include="Authenticators\AuthenticatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubesByServerAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersElastiCubesAsyncTests.cs" />
