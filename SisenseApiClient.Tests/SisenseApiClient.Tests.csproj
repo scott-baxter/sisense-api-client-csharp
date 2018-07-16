@@ -95,6 +95,7 @@
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\GetSetsAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v1.0\VerifyConnectivityWithRServerAsyncTests.cs" />
     <Compile Include="Services\Jaql\JaqlRunnerServiceTests.cs" />
+    <Compile Include="Services\Sql\SqlRunnerServiceTests.cs" />
     <Compile Include="Utils\HttpClient\FakeHttpClient.cs" />
   </ItemGroup>
   <ItemGroup>

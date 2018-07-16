@@ -69,6 +69,7 @@
     <Compile Include="Services\ElastiCubes\Types\MetadataSortBy.cs" />
     <Compile Include="Services\Jaql\JaqlRunnerService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\SqlRunner\SqlRunnerService.cs" />
     <Compile Include="SisenseClient.cs" />
     <Compile Include="Authenticators\Types\TokenType.cs" />
     <Compile Include="Utils\HttpClient\HttpClient.cs" />
