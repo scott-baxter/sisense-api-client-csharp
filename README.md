@@ -46,6 +46,9 @@ var sets = await sisenseClient.ElatiCubes.GetSetsAsync();
 
 <h1>What services are provided?</h1>
 
+###### Application ######
+- GetStatusAsync() - Provides information on the current status of the Sisense application
+
 ###### Authentication ######
 - LoginAsync(credentials) - Authenticate and receive a token
 

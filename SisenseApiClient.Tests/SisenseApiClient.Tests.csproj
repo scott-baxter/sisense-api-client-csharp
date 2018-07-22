@@ -78,6 +78,7 @@
     <Compile Include="Authenticators\GlobalTokenAthenticatorTests.cs" />
     <Compile Include="Authenticators\AuthenticatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Application\ApplicationServiceTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubesByServerAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetServersElastiCubesAsyncTests.cs" />
     <Compile Include="Services\ElastiCubes\ElastiCubeServiceTests\v0.9\GetElastiCubeMetadataAsyncTests.cs" />

@@ -1,4 +1,5 @@
 ﻿using SisenseApiClient.Authenticators;
+using SisenseApiClient.Services.Application;
 using SisenseApiClient.Services.Authentication;
 using SisenseApiClient.Services.ElastiCubes;
 using SisenseApiClient.Services.Jaql;
@@ -13,6 +14,7 @@ namespace SisenseApiClient
         public ElastiCubesService ElastiCubes { get; }
         public JaqlRunnerService JaqlRunnerService { get; }
         public SqlRunnerService SqlRunnerService { get; }
+        public ApplicationService ApplicationService { get; }
 
         public SisenseClient(string serverUrl, IAuthenticator authenticator, IHttpClient httpClient)
         {
@@ -21,6 +23,7 @@ namespace SisenseApiClient
             ElastiCubes = new ElastiCubesService(serverUrl, httpClient, authenticator);
             JaqlRunnerService = new JaqlRunnerService(serverUrl, httpClient, authenticator);
             SqlRunnerService = new SqlRunnerService(serverUrl, httpClient, authenticator);
+            ApplicationService = new ApplicationService(serverUrl, httpClient, authenticator);
         }
 
         public SisenseClient(string serverUrl, IAuthenticator authenticator)
